@@ -6,6 +6,9 @@ const nextConfig = {
     instrumentationHook: true,
   },
 
+  // Output configuration for Docker
+  output: 'standalone',
+
   // Image configuration
   images: {
     domains: ['localhost', 'res.cloudinary.com', 'images.unsplash.com'],
