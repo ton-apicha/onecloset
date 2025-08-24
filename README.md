@@ -5,6 +5,7 @@
 ## 🚀 Live Demo
 
 **เว็บไซต์พร้อมใช้งานแล้ว!** 🌐
+- **GitHub Repository**: [https://github.com/ton-apicha/onecloset](https://github.com/ton-apicha/onecloset)
 - **Local Development**: http://localhost:3000
 - **Production**: (รอ deployment)
 
@@ -21,6 +22,8 @@
 - ✅ **Custom CSS classes** 🎯
 - ✅ **ออกแบบใหม่คล้าย bchurunway.com** 🎪
 - ✅ **โทนสี pastel เขียวอ่อน** 🌿
+- ✅ **Git repository พร้อมใช้งาน** 📦
+- ✅ **Code อัปโหลดไป GitHub แล้ว** 🚀
 
 ### 🔧 การแก้ไขล่าสุด
 - ✅ แก้ไขปัญหาการ import components
@@ -31,6 +34,7 @@
 - ✅ **เปลี่ยนโทนสีเป็น pastel เขียวอ่อน** ให้ดูสดใสและเป็นมิตร
 - ✅ **เพิ่มฟีเจอร์ใหม่** เช่น sidebar, rental period tabs, member club
 - ✅ **Git repository พร้อมใช้งาน** 📦
+- ✅ **อัปโหลด code ไป GitHub สำเร็จ** 🎯
 
 ## 🎨 การออกแบบใหม่
 
@@ -61,7 +65,7 @@
 
 1. **Clone โปรเจค**
 ```bash
-git clone https://github.com/yourusername/onecloset.git
+git clone https://github.com/ton-apicha/onecloset.git
 cd OneCloset
 ```
 
@@ -94,6 +98,7 @@ npm start
 
 ## 🌐 การเข้าถึง
 
+- **GitHub Repository**: [https://github.com/ton-apicha/onecloset](https://github.com/ton-apicha/onecloset)
 - **เว็บไซต์หลัก**: http://localhost:3000
 - **หน้าสินค้า**: http://localhost:3000/products
 - **หน้าล็อกอิน**: http://localhost:3000/login
@@ -359,4 +364,4 @@ OneCloset Team - พัฒนาเพื่อการเช่าเสื้
 
 **สถานะล่าสุด**: ออกแบบใหม่คล้าย bchurunway.com พร้อมโทนสี pastel เขียวอ่อน ✨🌿
 
-**Git Repository**: พร้อมใช้งานและพร้อมสำหรับ deployment 🚀
+**Git Repository**: [https://github.com/ton-apicha/onecloset](https://github.com/ton-apicha/onecloset) - พร้อมใช้งานและพร้อมสำหรับ deployment 🚀
