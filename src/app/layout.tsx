@@ -1,24 +1,40 @@
-import React from 'react'
 import type { Metadata } from 'next'
+import { Kanit } from 'next/font/google'
 import './globals.css'
 import { CartProvider } from '@/components/cart/CartProvider'
+import { Header } from '@/components/layout/Header'
+import { Footer } from '@/components/layout/Footer'
+
+const kanit = Kanit({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  variable: '--font-kanit',
+})
 
 export const metadata: Metadata = {
-  title: 'OneCloset - เช่าเสื้อผ้าแบรนด์เนม',
-  description: 'เช่าเสื้อผ้าแบรนด์เนมคุณภาพดี ราคาไม่แพง จัดส่งฟรีถึงหน้าบ้าน',
-  keywords: 'เช่าเสื้อผ้า, แบรนด์เนม, แฟชั่น, ชุดราตรี, กระเป๋า, เครื่องประดับ',
+  title: 'OneCloset - แพลตฟอร์มเช่าเสื้อผ้าแบรนด์เนม',
+  description: 'เช่าชุดดีไซเนอร์และแบรนด์เนมกว่า 10,000+ สไตล์ สำหรับทุกโอกาสพิเศษของคุณ',
+  keywords: 'เช่าเสื้อผ้า, แบรนด์เนม, ชุดออกงาน, แฟชั่น, OneCloset',
   authors: [{ name: 'OneCloset Team' }],
+  creator: 'OneCloset',
+  publisher: 'OneCloset',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  metadataBase: new URL('https://onecloset.com'),
   openGraph: {
-    title: 'OneCloset - เช่าเสื้อผ้าแบรนด์เนม',
-    description: 'เช่าเสื้อผ้าแบรนด์เนมคุณภาพดี ราคาไม่แพง จัดส่งฟรีถึงหน้าบ้าน',
+    title: 'OneCloset - แพลตฟอร์มเช่าเสื้อผ้าแบรนด์เนม',
+    description: 'เช่าชุดดีไซเนอร์และแบรนด์เนมกว่า 10,000+ สไตล์ สำหรับทุกโอกาสพิเศษของคุณ',
     url: 'https://onecloset.com',
     siteName: 'OneCloset',
     images: [
       {
-        url: '/images/og-image.jpg',
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'OneCloset - เช่าเสื้อผ้าแบรนด์เนม',
+        alt: 'OneCloset - แพลตฟอร์มเช่าเสื้อผ้าแบรนด์เนม',
       },
     ],
     locale: 'th_TH',
@@ -26,9 +42,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'OneCloset - เช่าเสื้อผ้าแบรนด์เนม',
-    description: 'เช่าเสื้อผ้าแบรนด์เนมคุณภาพดี ราคาไม่แพง จัดส่งฟรีถึงหน้าบ้าน',
-    images: ['/images/og-image.jpg'],
+    title: 'OneCloset - แพลตฟอร์มเช่าเสื้อผ้าแบรนด์เนม',
+    description: 'เช่าชุดดีไซเนอร์และแบรนด์เนมกว่า 10,000+ สไตล์ สำหรับทุกโอกาสพิเศษของคุณ',
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -52,10 +68,16 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="th">
-      <body className="font-sans antialiased">
+    <html lang="th" className={kanit.variable}>
+      <body className={`${kanit.className} antialiased`}>
         <CartProvider>
-          {children}
+          <div className="min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </CartProvider>
       </body>
     </html>
